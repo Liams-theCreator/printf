@@ -17,6 +17,16 @@ typedef struct format
 	int (*f)(va_list arg);
 
 } fr;
+
+int _putchar(char c);
+void _puts(char *str);
+
+int _strlen(char *str);
+
 int _printf(const char *format, ...);
+
+int print_c(va_list val);
+int print_s(va_list val);
+int print_perc(void)
 
 #endif
