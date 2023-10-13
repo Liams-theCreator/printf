@@ -8,6 +8,7 @@
  * Return: length .
  *
  */
+
 int print_o(long n)
 {
 	int len = 0;
@@ -16,6 +17,7 @@ int print_o(long n)
 		len += print_o(n / 8);
 	return (len += _putchar((n % 8) + 48));
 }
+
 /**
  * print_octal - print octal.
  *
@@ -24,6 +26,7 @@ int print_o(long n)
  * Return: length.
  *
  */
+
 int print_octal(va_list args)
 {
 	long num = va_arg(args, int);
