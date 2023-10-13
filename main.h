@@ -29,5 +29,12 @@ int _printf_boddy(fr *list, va_list args, const char *format);
 int print_c(va_list val);
 int print_s(va_list val);
 int print_perc(va_list args);
+int print_binary(va_list args);
+int print_octal(va_list args);
 int print_int(va_list arg);
+int print_HEX(va_list arg);
+int print_hex(va_list arg);
+
+
+
 #endif

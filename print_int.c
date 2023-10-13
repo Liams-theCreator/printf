@@ -8,7 +8,7 @@
  * Return: The number of characters printed.
  */
 
-int integer(int num)
+int integer(long num)
 {
 	int length = 0;
 

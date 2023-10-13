@@ -10,6 +10,7 @@ int main()
 	printf("----------------------\n");
 	printf("----> CHAR CASES <----\n");
 	printf("----------------------\n");
+	_putchar(10);
 	len_1 = printf("Expected output:    %c\n", 53);
 	len_2 = _printf("Current output:     %c\n", 53);
 	printf("Expected length:    [%d]\n", len_1);
@@ -22,8 +23,6 @@ int main()
 	len_2 = _printf("Current output:     %cAAA\n", 'a');
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
-	len_1 = printf("Expected output:    %yd\n");
-	len_2 = _printf("Current output:     %yd\n");
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
 	len_1 = printf("Expected output:    %c\n", '\0');

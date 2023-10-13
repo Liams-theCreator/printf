@@ -9,7 +9,7 @@ int main()
 
 	/* ===========> %d <=========== */
 	printf("----------------------\n");
-	printf("--> INT(%d) CASES <---\n");
+	printf("--> INT(%%d) CASES <---\n");
 	printf("----------------------\n");
 	len_1 = printf("%d\n", 0);
 	len_2 = _printf("%d\n", 0);
@@ -25,7 +25,7 @@ int main()
 
 	/* ===========> %i <=========== */
 	printf("----------------------\n");
-	printf("--> INT(%i) CASES <---\n");
+	printf("--> INT(%%i) CASES <---\n");
 	printf("----------------------\n");
 	len_1 = printf("%i\n", 0);
 	len_2 = _printf("%i\n", 0);
