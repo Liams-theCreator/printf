@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+
 /**
  * struct format - Struct format.
  *
@@ -27,6 +28,6 @@ int _printf(const char *format, ...);
 
 int print_c(va_list val);
 int print_s(va_list val);
-int print_perc(void)
+int print_perc(void);
 
 #endif
