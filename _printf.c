@@ -9,7 +9,9 @@ int _printf(const char *format, ...)
 	va_list args;
 	int len;
 	fr list[] = {
-		{"%c", print_c}, {"%s", print_s}, {"%%", print_perc}, {"%d", print_int}, {"%i", print_int}, {NULL, NULL}};
+		{"%c", print_c}, {"%s", print_s}, 
+		{"%%", print_perc}, {"%d", print_int}, 
+		{"%i", print_int}, {NULL, NULL}};
 	va_start(args, format);
 	len = _printf_boddy(list, args, format);
 	va_end(args);
