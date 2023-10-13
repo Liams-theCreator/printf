@@ -22,7 +22,7 @@ int _strlen(char *s)
 
 /**
  * _putchar - prints the character c
- *
+ * @c: The character to be written.
  * Return: if success 1
  *
  */
