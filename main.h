@@ -25,9 +25,9 @@ void _puts(char *str);
 int _strlen(char *str);
 
 int _printf(const char *format, ...);
-
+int _printf_boddy(fr *list, va_list args, const char *format);
 int print_c(va_list val);
 int print_s(va_list val);
-int print_perc(void);
-
+int print_perc(va_list args);
+int print_int(va_list arg);
 #endif

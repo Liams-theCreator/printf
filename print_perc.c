@@ -6,8 +6,9 @@
  * Return: 1
  */
 
-int print_perc(void)
+int print_perc(va_list args)
 {
+	(void) args;
 	_putchar(37);
 	return (1);
 }

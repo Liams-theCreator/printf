@@ -14,7 +14,7 @@ int print_s(va_list val)
 	char *string;
 
 	string = va_arg(val, char *);
-	for (; i != '\0'; i++)
+	for (; string[i]; i++)
 		_putchar(string[i]);
 
 	return (i);
