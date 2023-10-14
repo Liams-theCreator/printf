@@ -8,7 +8,7 @@
  * Return: length .
  *
  */
-int print_b(int n)
+int print_b(unsigned int n)
 {
 	int len = 0;
 
@@ -26,7 +26,7 @@ int print_b(int n)
  */
 int print_binary(va_list args)
 {
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 
 	return (print_b(num));
 }

@@ -9,7 +9,7 @@
  *
  */
 
-int print_o(long n)
+int print_o(unsigned int n)
 {
 	int len = 0;
 
@@ -29,7 +29,7 @@ int print_o(long n)
 
 int print_octal(va_list args)
 {
-	long num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 
 	return (print_o(num));
 }

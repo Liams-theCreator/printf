@@ -7,16 +7,16 @@
  * Return: The number of characters printed.
  */
 
-int print_h(int n)
+int print_h(unsigned int n)
 {
-	int len = 0;
+	int len = 0, remainder;
 
 	if (n / 16)
 	{
-		len += hex(n / 16);
+		len += print_h(n / 16);
 	}
 
-	int remainder = n % 16;
+	remainder = n % 16;
 
 	if (remainder < 10)
 	{
@@ -38,7 +38,7 @@ int print_h(int n)
 
 int print_hex(va_list arg)
 {
-	int n = va_arg(arg, int);
+	unsigned int n = va_arg(arg, unsigned int);
 
 	return (print_h(n));
 }

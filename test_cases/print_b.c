@@ -19,7 +19,7 @@ int main()
 	len_1 = _printf("%b\n", 255);
 	assert(len_1 == len_2);
 
-	len_1 = printf("%b\n", UINT_MAX);
+	len_1 = _printf("%b\n", UINT_MAX);
 	len_2 = _printf("%b\n", UINT_MAX);
 	assert(len_1 == len_2);
 	return (0);
