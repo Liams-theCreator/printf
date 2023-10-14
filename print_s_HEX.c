@@ -1,6 +1,32 @@
 #include "main.h"
 
 /**
+ * print_He - Prints the hexadecimal representation of an integer.
+ * @n: The integer to be printed in hexadecimal.
+ *
+ * Return: The number of characters printed.
+ */
+
+int print_He(char n)
+{
+	int len = 0, remainder;
+
+	remainder = n % 16;
+	if (remainder < 10)
+		len += _putchar(remainder + '0');
+	else
+		len += _putchar(remainder - 10 + 'A');
+
+	remainder = n / 16;
+	if (remainder < 10)
+		len += _putchar(remainder + '0');
+	else
+		len += _putchar(remainder - 10 + 'A');
+
+	return (len);
+}
+
+/**
  * print_S_hex - Prints a modified version of a string with non-printable ASCII
  *                characters replaced by their hexadecimal representations.
  * @args: A variable argument list containing the string to be processed.
@@ -15,17 +41,21 @@ int print_S_hex(va_list args)
 	int len = 0;
 
 	string = va_arg(args, char *);
-
-	for (; string[i] != '\0'; i++)
+	if (string == NULL)
 	{
-		if ((string[i] > 0 && string[i] < 32) || string[i] >= 127)
+		string = "(null)";
+		return (_puts(string));
+
+		for (; string[i] != '\0'; i++)
 		{
-			len += _putchar('\\');
-			len += _putchar('x');
-			len += print_H(string[i]);
+			if ((string[i] > 0 && string[i] < 32) || string[i] >= 127)
+			{
+				len += _putchar('\\');
+				len += _putchar('x');
+				len += print_He((unsigned char)string[i]);
+			}
+			else
+				_putchar(string[i]);
 		}
-		else
-			_putchar(string[i]);
+		return (len);
 	}
-	return (len);
-}

@@ -17,7 +17,7 @@ int print_H(unsigned int n)
 	if (remainder < 10)
 		len += _putchar(remainder + '0');
 	else
-		len += _putchar(remainder - 10 + 65);
+		len += _putchar(remainder - 10 + 'A');
 	return (len);
 }
 

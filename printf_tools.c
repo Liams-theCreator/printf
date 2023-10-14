@@ -36,9 +36,11 @@ int _putchar(char c)
  * _puts - print a string
  *
  * @str: pointer to char
+ *
+ * Return: string
  */
 
-void _puts(char *str)
+int _puts(char *str)
 {
 
 	int i;
@@ -48,7 +50,7 @@ void _puts(char *str)
 		_putchar(str[i]);
 	}
 
-	_putchar('\n');
+	return (i);
 }
 /**
  * is_space - check for spaces and skip it.

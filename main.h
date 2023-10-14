@@ -20,7 +20,7 @@ typedef struct format
 } fr;
 
 int _putchar(char c);
-void _puts(char *str);
+int _puts(char *str);
 
 int _strlen(char *str);
 
@@ -37,4 +37,6 @@ int print_hexx(va_list arg);
 int is_space(const char *format, int i);
 int print_S_hex(va_list args);
 int print_H(unsigned int n);
+int print_He(char n);
+
 #endif
