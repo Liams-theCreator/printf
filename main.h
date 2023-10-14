@@ -38,5 +38,7 @@ int is_space(const char *format, int i);
 int print_S_hex(va_list args);
 int print_H(unsigned int n);
 int print_He(char n);
+int print_r(va_list val);
+int print_rot13(va_list args);
 
 #endif
