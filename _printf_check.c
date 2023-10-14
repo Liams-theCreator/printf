@@ -16,6 +16,12 @@ int _printf_boddy(fr *list, va_list args, const char *format)
 		{
 			prec_holder = i, i++, triger = 1;
 			i = is_space(format, i);/*"%   dd"*/
+			if (format[i] == 43 || format[i] == 35)
+			{
+				len += is_plus(format, &i, args);
+				len += is_hash(format, &i, args);
+				continue;
+			}
 			for (j = 0; list[j].sp; j++)
 			{
 				if (format[i] == list[j].sp[1])
