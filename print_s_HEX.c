@@ -53,7 +53,7 @@ int print_S_hex(va_list args)
 		{
 			len += _putchar('\\');
 			len += _putchar('x');
-			len += print_He((unsigned char)string[i]);
+			len += print_He(string[i]);
 		}
 		else
 			len += _putchar(string[i]);
