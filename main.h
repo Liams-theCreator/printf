@@ -32,6 +32,8 @@ int print_perc(va_list args);
 int print_binary(va_list args);
 int print_octal(va_list args);
 int print_int(va_list arg);
+int print_u(va_list arg);
+int print_unsigned(unsigned int num);
 int print_HEX(va_list arg);
 int print_hexx(va_list arg);
 int is_space(const char *format, int i);
