@@ -13,6 +13,8 @@ int main()
     _putchar(10);
     len_1 = printf("Expected output:    %d\n", 53);
     len_2 = _printf("Current output:     % d\n", 53);
+    _printf("Current output:     %$\n", 53);
+    _printf("Current output:     %.d hellp\n", 53);
     printf("Expected length:    [%d]\n", len_1);
     printf("Current length:     [%d]\n", len_2);
     len_1 = printf("Expected output:    %cc\n", 'a');

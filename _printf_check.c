@@ -8,22 +8,24 @@
  */
 int _printf_boddy(fr *list, va_list args, const char *format)
 {
-	int len = 0, i = 0, j;
+	int len = 0, i = 0, j, triger;
 
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			i++;
+			i++, triger = 1;
 			i = is_space(format, i);/*"%ssidi"*/
 			for (j = 0; list[j].sp; j++)
 			{
 				if (format[i] == list[j].sp[1])
 				{
-					len += list[j].f(args), i++;
+					len += list[j].f(args), i++, triger = 0;
 					break;
 				}
 			}
+			if (triger)
+				len += _putchar(format[i]), i++;
 		}
 		else
 		{

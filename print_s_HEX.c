@@ -18,7 +18,7 @@ int print_S_hex(va_list args)
 
 	for (; string[i] != '\0'; i++)
 	{
-		if (string[i] > 0 && string[i] < 32 || string[i] >= 127)
+		if ((string[i] > 0 && string[i] < 32) || string[i] >= 127)
 		{
 			len += _putchar('\\');
 			len += _putchar('x');
