@@ -6,23 +6,19 @@
  *
  * Return: The number of characters printed.
  */
-
-int print_He(unsigned char n)
+int print_He(char n)
 {
-	int len = 0, remainder;
+	int len = 0;
 
-	remainder = n % 16;
-	if (remainder < 10)
-		len += _putchar(remainder + '0');
+	if ((n / 16) < 10)
+		len += _putchar((n / 16) + '0');
 	else
-		len += _putchar(remainder - 10 + 'A');
+		len += _putchar((n / 16) + 55);
 
-	remainder = n / 16;
-	if (remainder < 10)
-		len += _putchar(remainder + '0');
+	if ((n % 16) < 10)
+		len += _putchar((n % 16) + '0');
 	else
-		len += _putchar(remainder - 10 + 'A');
-
+		len += _putchar((n % 16) + 55);
 	return (len);
 }
 
@@ -36,30 +32,26 @@ int print_He(unsigned char n)
 
 int print_S_hex(va_list args)
 {
-	char *string;
-	int i = 0;
-	int len = 0;
+	char *string = va_arg(args, char *);
+	int i, len = 0;
 
-	string = va_arg(args, char *);
 	if (string == NULL)
 	{
 		string = "(null)";
-		return (_putchar('\0'));
+		return (_puts(string));
 	}
 
-	for (; string[i] != '\0'; i++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
-		if ((string[i] > 0 && string[i] < 32) || (string[i] >= 127))
+		if (string[i] < 32 || (string[i] >= 127))
 		{
 			len += _putchar('\\');
 			len += _putchar('x');
-			if (string[i] < 16)
-				len += _putchar('0');
-			len += print_He((unsigned char)string[i]);
+			len += print_He(string[i]);
 		}
 		else
 			len += _putchar(string[i]);
 	}
 
-	return len;
+	return (len);
 }
