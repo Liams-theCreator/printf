@@ -44,6 +44,7 @@ int print_S_hex(va_list args)
 	if (string == NULL)
 	{
 		string = "(null)";
+		return (_puts(string));
 	}
 
 	for (; string[i] != '\0'; i++)
