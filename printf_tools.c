@@ -52,9 +52,9 @@ void _puts(char *str)
 }
 /**
  * is_space - check for spaces and skip it.
- *
  * @format: double pointer to string.
- *
+ * @i: integer.
+ * Return: index after skiping spaces and tabs.
  */
 
 int is_space(const char *format, int i)

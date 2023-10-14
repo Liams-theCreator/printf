@@ -35,5 +35,6 @@ int print_int(va_list arg);
 int print_HEX(va_list arg);
 int print_hexx(va_list arg);
 int is_space(const char *format, int i);
-
+int print_S_hex(va_list args);
+int print_H(unsigned int n);
 #endif
