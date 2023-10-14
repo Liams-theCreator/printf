@@ -11,11 +11,12 @@
 int print_r(va_list val)
 {
 	int i = 0, len = 0;
-	char string = va_arg(val, char *);
+	char *string = va_arg(val, char *);
 
 	if (string == NULL)
 	{
 		string = "(null)";
+		return (_puts(string));
 	}
 	for (; string[i] != '/0'; i++)
 	{
