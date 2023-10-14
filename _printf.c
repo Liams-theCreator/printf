@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 		{"%x", print_hexx}, {"%X", print_HEX},
 		{"%o", print_octal}, {NULL, NULL}};
 	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 	len = _printf_boddy(list, args, format);
 	va_end(args);
 	return (len);

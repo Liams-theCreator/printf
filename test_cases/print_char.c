@@ -34,5 +34,5 @@ int main()
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
 
-		return (0);
+	return (0);
 }

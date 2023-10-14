@@ -50,3 +50,16 @@ void _puts(char *str)
 
 	_putchar('\n');
 }
+/**
+ * is_space - check for spaces and skip it.
+ *
+ * @format: double pointer to string.
+ *
+ */
+
+int is_space(const char *format, int i)
+{
+	while (format[i] == 32 || format[i] == 9)
+		i++;
+	return (i);
+}
