@@ -7,7 +7,7 @@
  * Return: The number of characters printed.
  */
 
-int print_He(char n)
+int print_He(unsigned char n)
 {
 	int len = 0, remainder;
 
@@ -44,19 +44,19 @@ int print_S_hex(va_list args)
 	if (string == NULL)
 	{
 		string = "(null)";
-		return (_puts(string));
-
-		for (; string[i] != '\0'; i++)
-		{
-			if ((string[i] > 0 && string[i] < 32) || string[i] >= 127)
-			{
-				len += _putchar('\\');
-				len += _putchar('x');
-				len += print_He((unsigned char)string[i]);
-			}
-			else
-				_putchar(string[i]);
-		}
 	}
+
+	for (; string[i] != '\0'; i++)
+	{
+		if ((string[i] > 0 && string[i] < 32) || (string[i] >= 127))
+		{
+			len += _putchar('\\');
+			len += _putchar('x');
+			len += print_He((unsigned char)string[i]);
+		}
+		else
+			len += _putchar(string[i]);
+	}
+
 	return (len);
 }
