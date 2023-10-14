@@ -30,13 +30,13 @@ int print_h(unsigned int n)
 }
 
 /**
- * print_hex - Prints the lowercase hexadecimal
+ * print_hexx - Prints the lowercase hexadecimal
  * @arg: A variable argument list containing the integer to be printed.
  *
  * Return: The number of characters printed.
  */
 
-int print_hex(va_list arg)
+int print_hexx(va_list arg)
 {
 	unsigned int n = va_arg(arg, unsigned int);
 
