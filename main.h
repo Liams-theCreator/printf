@@ -42,5 +42,6 @@ int print_H(unsigned int n);
 int print_He(char n);
 int print_r(va_list val);
 int print_rot13(va_list arg);
+int print_p(va_list args);
 
 #endif
