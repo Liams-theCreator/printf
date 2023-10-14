@@ -12,9 +12,8 @@ int _printf(const char *format, ...)
 		{"%c", print_c}, {"%s", print_s},
 		{"%%", print_perc}, {"%d", print_int},
 		{"%i", print_int}, {"%b", print_binary},
-		{"%x", print_hex}, {"%X", print_HEX},
-		{"%o", print_octal},
-		{NULL, NULL}};
+		{"%x", print_hexx}, {"%X", print_HEX},
+		{"%o", print_octal}, {NULL, NULL}};
 	va_start(args, format);
 	len = _printf_boddy(list, args, format);
 	va_end(args);
