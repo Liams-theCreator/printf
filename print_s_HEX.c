@@ -44,7 +44,7 @@ int print_S_hex(va_list args)
 	if (string == NULL)
 	{
 		string = "(null)";
-		return (_puts(string));
+		return (_putchar('\0'));
 	}
 
 	for (; string[i] != '\0'; i++)
@@ -53,11 +53,13 @@ int print_S_hex(va_list args)
 		{
 			len += _putchar('\\');
 			len += _putchar('x');
-			len += print_He(string[i]);
+			if (string[i] < 16)
+				len += _putchar('0');
+			len += print_He((unsigned char)string[i]);
 		}
 		else
 			len += _putchar(string[i]);
 	}
 
-	return (len);
+	return len;
 }
