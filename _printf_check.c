@@ -8,14 +8,14 @@
  */
 int _printf_boddy(fr *list, va_list args, const char *format)
 {
-	int len = 0, i = 0, j, triger;
+	int len = 0, i = 0, j, triger, prec_holder;
 
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			i++, triger = 1;
-			i = is_space(format, i);/*"%ssidi"*/
+			prec_holder = i, i++, triger = 1;
+			i = is_space(format, i);/*"%   dd"*/
 			for (j = 0; list[j].sp; j++)
 			{
 				if (format[i] == list[j].sp[1])
@@ -23,9 +23,12 @@ int _printf_boddy(fr *list, va_list args, const char *format)
 					len += list[j].f(args), i++, triger = 0;
 					break;
 				}
-			}
-			if (triger)
+			}/*"%   "*/
+			if (triger && format[i])
+			{
+				len += _putchar(format[prec_holder]);
 				len += _putchar(format[i]), i++;
+			}
 		}
 		else
 		{
