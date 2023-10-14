@@ -57,5 +57,6 @@ int print_S_hex(va_list args)
 			else
 				_putchar(string[i]);
 		}
-		return (len);
 	}
+	return (len);
+}
