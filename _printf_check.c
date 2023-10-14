@@ -23,7 +23,7 @@ int _printf_boddy(fr *list, va_list args, const char *format)
 					len += list[j].f(args), i++, triger = 0;
 					break;
 				}
-			}/*"%   "*/
+			} /*"%   s"*/
 			if (triger && format[i])
 			{
 				len += _putchar(format[prec_holder]);
