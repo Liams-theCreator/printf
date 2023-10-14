@@ -18,7 +18,7 @@ int print_r(va_list val)
 		string = "(null)";
 		return (_puts(string));
 	}
-	for (; string[i] != '/0'; i++)
+	for (; string[i] != '\0'; i++)
 	{
 		len++;
 	}
