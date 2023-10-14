@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 		{"%i", print_int}, {"%b", print_binary},
 		{"%x", print_hexx}, {"%X", print_HEX},
 		{"%o", print_octal}, {"%S", print_S_hex},
-		{"%r", print_r},{"%R", print_rot13},
+		{"%r", print_r}, {"%R", print_rot13},
 		{NULL, NULL}};
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
