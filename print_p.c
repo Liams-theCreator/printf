@@ -11,7 +11,7 @@
 
 int con(unsigned long a)
 {
-	unsigned long i, rem;
+	unsigned long rem;
 	int len = 0;
 
 	if (a / 16)
