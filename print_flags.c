@@ -1,12 +1,16 @@
 #include "main.h"
-
-
-
+/**
+ * is_plus - check if the integer is positive and print '+'.
+ * @format: string contain the specifier.
+ * @i: pointer to integer (index of format).
+ * @args: va_list variable.
+ * Return: length.
+ */
 int is_plus(const char *format, int *i, va_list args)
 {
 	int len = 0, is;
 
-	if (format[(*i)] == 43 && (format[(*i) + 1] == 'd' || format[(*i) + 1] == 'i'))
+	if (format[(*i) + 1] == 'd' || format[(*i) + 1] == 'i')
 	{
 		is = va_arg(args, int);
 		if (is >= 0)
@@ -21,11 +25,16 @@ int is_plus(const char *format, int *i, va_list args)
 			*i = *i + 2;
 		}
 	}
-	
+
 	return (len);
 }
-
-
+/**
+ * is_hash - Handles the '#' flag for octal, hexadecimal.
+ * @format: string contain the specifier.
+ * @i: pointer to integer (index of format).
+ * @args: va_list variable.
+ * Return: length.
+ */
 int is_hash(const char *format, int *i, va_list args)
 {
 	int len = 0;

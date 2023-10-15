@@ -41,7 +41,7 @@ int print_He(char n);
 int print_int(va_list arg);
 int integer(long num);
 int print_u(va_list arg);
-int print_unsigned(unsigned int num);
+int print_uns(unsigned int num);
 
 int print_r(va_list val);
 int print_rot13(va_list arg);
