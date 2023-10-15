@@ -1,28 +1,43 @@
 #include "main.h"
 
 /**
- * print_p - Prints the hexadecimal representation of a pointer.
+ * con - print hexa value of an unsigned long.
  *
- * @args: A va_list containing the pointer to be printed.
+ * @a: unsgined long integer.
  *
- * Return: The number of characters printed.
+ * Return: length.
+ *
  */
 
+int con(unsigned long a)
+{
+	unsigned long i, rem;
+	int len = 0;
+
+	if (a / 16)
+		len += con(a / 16);
+	rem = a % 16;
+	if (rem < 10)
+		len += _putchar(rem + 48);
+	else
+		len += _putchar(rem + 87);
+	return (len);
+}
+/**
+ * print_p - Prints the hexadecimal representation of a pointer.
+ * @args: A va_list containing the pointer to be printed.
+ * Return: The number of characters printed.
+ */
 int print_p(va_list args)
 {
 	int length = 0;
-	void *ptr_ad = va_arg(args, void *);
+	unsigned long ptr_ad = (unsigned long)va_arg(args, void *);
 
-	if (ptr_ad == NULL)
+	if (ptr_ad == 0)
 	{
-		ptr_ad = "(null)";
-		return (_puts(ptr_ad));
+		return (_puts("(nil)"));
 	}
-	else
-	{
-		length += _puts("0x");
-		length += print_hexx(ptr_ad);
-	}
-
+	length += _printf("0x");
+	length += con(ptr_ad);
 	return (length);
 }
