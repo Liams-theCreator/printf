@@ -56,7 +56,6 @@ int _puts(char *str)
  * is_space - check for spaces and skip it.
  * @format: double pointer to string.
  * @i: integer.
- * @printed: incase invalid format print it on the main _printf.
  * Return: index after skiping spaces and tabs.
  */
 

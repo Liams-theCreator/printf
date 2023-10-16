@@ -8,7 +8,7 @@
  */
 int _printf_boddy(fr *list, va_list args, const char *format)
 {
-	int len = 0, i = 0, j, triger, prec_holder, skip_printed = 0;
+	int len = 0, i = 0, j, triger, prec_holder, skip_printed = 1;
 
 	while (format[i])
 	{
@@ -17,13 +17,13 @@ int _printf_boddy(fr *list, va_list args, const char *format)
 			prec_holder = i, i++, triger = 1;
 			while (1)
 			{
-				len += is_flag(format, &i, args, &skip_printed);/*"%   d"*/
-				if (skip_printed == 2)
+				len += is_flag(format, &i, args, &skip_printed);/*"% yd"*/
+				if (skip_printed == 1)
 					break;
 			}
 			for (j = 0; list[j].sp; j++)
 			{
-				if (format[i] == list[j].sp[1] && skip_printed)
+				if (format[i] == list[j].sp[1])
 				{
 					len += list[j].f(args), i++, triger = 0;
 					break;

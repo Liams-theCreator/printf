@@ -22,7 +22,7 @@ int is_flag(const char *format, int *i, va_list vala, int *printed)
 		case '#':
 			return (is_hash(format, i, vala, printed));
 		default:
-			*printed = 2;
+			*printed = 1;
 			break;
 	}
 	return (0);

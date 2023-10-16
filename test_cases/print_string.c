@@ -35,7 +35,7 @@ int main()
 	_printf("%s\n", NULL);
 	_printf("%%%c\n", 'X');
 	_printf("%t\n");
-	_printf("space : %  d\n", 2055);
+	_printf("space :% 	 s\n", "hello");
 	_printf("%+d\n", 55);
 	_printf("%+i\n", 55);
 	_printf("%+d\n", -20);
