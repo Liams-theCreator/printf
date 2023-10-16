@@ -45,10 +45,10 @@ int print_uns(unsigned int num);
 
 int print_r(va_list val);
 int print_rot13(va_list arg);
-
-int is_space(const char *format, int i);
-int is_plus(const char *format, int *i, va_list args);
-int is_hash(const char *format, int *i, va_list args);
+int is_flag(const char *format, int *i, va_list vala, int *printed);
+int is_space(const char *format, int *i);
+int is_plus(const char *format, int *i, va_list vala, int *printed);
+int is_hash(const char *format, int *i, va_list vala, int *printed);
 
 int print_p(va_list args);
 #endif

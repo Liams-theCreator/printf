@@ -8,29 +8,28 @@
  */
 int _printf_boddy(fr *list, va_list args, const char *format)
 {
-	int len = 0, i = 0, j, triger, prec_holder;
+	int len = 0, i = 0, j, triger, prec_holder, skip_printed = 0;
 
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			prec_holder = i, i++, triger = 1;
-			i = is_space(format, i);/*"%   dd"*/
-			if (format[i] == 43 || format[i] == 35)
+			while (1)
 			{
-				len += is_plus(format, &i, args);
-				len += is_hash(format, &i, args);
-				continue;
+				len += is_flag(format, &i, args, &skip_printed);/*"%   d"*/
+				if (skip_printed == 2)
+					break;
 			}
 			for (j = 0; list[j].sp; j++)
 			{
-				if (format[i] == list[j].sp[1])
+				if (format[i] == list[j].sp[1] && skip_printed)
 				{
 					len += list[j].f(args), i++, triger = 0;
 					break;
 				}
 			} /*"%   s"*/
-			if (triger && format[i])
+			if (triger && format[i] && skip_printed == 1)
 			{
 				len += _putchar(format[prec_holder]);
 				len += _putchar(format[i]), i++;

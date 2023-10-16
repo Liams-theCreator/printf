@@ -56,12 +56,13 @@ int _puts(char *str)
  * is_space - check for spaces and skip it.
  * @format: double pointer to string.
  * @i: integer.
+ * @printed: incase invalid format print it on the main _printf.
  * Return: index after skiping spaces and tabs.
  */
 
-int is_space(const char *format, int i)
+int is_space(const char *format, int *i)
 {
-	while (format[i] == 32 || format[i] == 9)
-		i++;
-	return (i);
+	while (format[*i] == 32 || format[*i] == 9)
+		*i = *i + 1;
+	return (0);
 }
