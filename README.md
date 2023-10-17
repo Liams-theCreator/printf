@@ -42,4 +42,3 @@ int main(void) {
 ## Authors
 
 - [@Liams-theCreator](https://github.com/Liams-theCreator)
-- [@AadelAferyad](https://github.com/AadelAferyad)
