@@ -3,12 +3,12 @@
 printf \- printf - format and print data
 .SH SYNOPSIS
 .B printf
-.RB FORMAT 
+.RB FORMAT
 [
-.IR ARGUMENT 
+.IR ARGUMENT
 ] "..."
 .P
-.B printf 
+.B printf
 .IR OPTION
 .SH DESCRIPTION
 .B printf :
@@ -41,7 +41,7 @@ Print a singel character.
 .B %s
 Print a string.
 .TP
-.B %d, %i 
+.B %d, %i
 Print an integer (signed decimal).
 .TP
 .B %b
@@ -71,5 +71,5 @@ Print a string in ROT13 encryption.
 .B %S
 Print Non printable characters as (\x).
 .SH COPYRIGHT
-.B GNU haruma copyright, breakdance!
+.B Gmanou copyright, breakdance!
 .printf.1 [+] | | utf-8 (unix)
