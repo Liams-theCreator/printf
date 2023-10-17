@@ -6,11 +6,12 @@
  * @i: pointer to integer (index of format).
  * @vala: va_list variable.
  * @printed: incase invalid format print it on the main _printf.
+ * @flag: check if the format in index i not matching any case on the switch.
  * Return: length.
  */
 
 
-int is_flag(const char *format, int *i, va_list vala, int *printed)
+int is_flag(const char *format, int *i, va_list vala, int *printed, int *flag)
 {
 
 	switch (format[*i])
@@ -22,7 +23,7 @@ int is_flag(const char *format, int *i, va_list vala, int *printed)
 		case '#':
 			return (is_hash(format, i, vala, printed));
 		default:
-			*printed = 1;
+			*flag = 1;
 			break;
 	}
 	return (0);

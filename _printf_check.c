@@ -8,17 +8,17 @@
  */
 int _printf_boddy(fr *list, va_list args, const char *format)
 {
-	int len = 0, i = 0, j, triger, prec_holder, skip_printed = 1;
+	int len = 0, i = 0, j, triger, prec_holder, skip_printed = 1, flag = 0;
 
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			prec_holder = i, i++, triger = 1;
+			prec_holder = i, i++, triger = 1, flag = 0;
 			while (1)
 			{
-				len += is_flag(format, &i, args, &skip_printed);/*"% yd"*/
-				if (skip_printed == 1)
+				len += is_flag(format, &i, args, &skip_printed, &flag);/*"% yd", "%  +d"*/
+				if (flag)
 					break;
 			}
 			for (j = 0; list[j].sp; j++)
