@@ -10,7 +10,7 @@ This repository hosts a custom printf implementation in C, developed as part of 
 int _printf(const char *format, ...);
 ```
 # Compilation:
-```bash
+```c
 gcc -Wall -Werror -Wextra -pedantic *.c
 ```
 ## Format Specifiers
