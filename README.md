@@ -13,22 +13,27 @@ int _printf(const char *format, ...);
 ```bash
 gcc -Wall -Werror -Wextra -pedantic *.c
 ```
+# Help:
+For help run :
+```bash
+man ./printf
+```
 ## Format Specifiers
 | Specifiers | Description     |
 | :-------- | :------- |
-| `%s` | Print strings |
 | `%c` | Print characters|
+| `%s` | Print strings |
+| `%S` | Print Non printable characters as (\x) |
 | `%d and %i` | Print integers |
 | `%u` | Print unsigned integers |
-| `%p` | Print a memory addresse |
-| `%%` | Print a literal '%' character |
-| `%r` | Print a reversed string |
 | `%b` | Print binary |
 | `%o` | Print octal numbers |
 | `%x` | Print lowercase hexadecimal |
 | `%X` | Print uppercase hexadecimal |
+| `%p` | Print a memory addresse |
+| `%r` | Print a reversed string |
 | `%R` | Print a string in ROT13 encryption |
-| `%S` | Print Non printable characters as (\x) |
+| `%%` | Print a literal '%' character |
 
 ## Simple usage :
 
