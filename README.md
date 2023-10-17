@@ -16,7 +16,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c
 # Help:
 For help run :
 ```bash
-man ./printf
+man ./(printf)(https://github.com/Liams-theCreator/printf/blob/main/printf)
 ```
 ## Format Specifiers
 | Specifiers | Description     |
