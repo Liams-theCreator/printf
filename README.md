@@ -9,6 +9,10 @@ This repository hosts a custom printf implementation in C, developed as part of 
 ```c
 int _printf(const char *format, ...);
 ```
+# Compilation:
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c
+```
 ## Format Specifiers
 | Specifiers | Description     |
 | :-------- | :------- |
@@ -41,4 +45,5 @@ int main(void) {
 
 ## Authors
 
+- [@AadelAferyad](https://github.com/AadelAferyad)
 - [@Liams-theCreator](https://github.com/Liams-theCreator)

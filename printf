@@ -1,0 +1,75 @@
+.TH printf 1 printf\-0.1
+.SH NAME
+printf \- printf - format and print data
+.SH SYNOPSIS
+.B printf
+.RB FORMAT 
+[
+.IR ARGUMENT 
+] "..."
+.P
+.B printf 
+.IR OPTION
+.SH DESCRIPTION
+.B printf :
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTION.
+.SH AUTHOR
+This man page was written by [
+.B Aadel aferyad
+]
+.SH COLLABORATORS
+.B Ismail Mellali
+[
+.B Liams-theCreator
+]<https://github.com/Liams-theCreator>
+.P
+.B Aadel aferyad
+[
+.B AadelAferyad
+]<https://github.com/AadelAferyad>
+.SH COMPILATION
+add your main.c file and compile using those flags:
+.P
+.B gcc -Wall -Werror -Wextra -pedantic *.c
+
+.SH CONVERSION SPECIFFIERS
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+.TP
+.B %c
+Print a singel character.
+.TP
+.B %s
+Print a string.
+.TP
+.B %d, %i 
+Print an integer (signed decimal).
+.TP
+.B %b
+Convert unsigned int argument to binary and print it.
+.TP
+.B %u
+Print an unsigned decimal integer (non-negative integer).
+.TP
+.B %o
+Print an integer in octal (base 8) representation.
+.TP
+.B %x
+Print an integer in hexadecimal (base 16) representation using lowercase letters (a-f) for values 10 to 15.
+.TP
+.B %X
+Print an integer in hexadecimal (base 16) representation using uppercase letters (A-F) for values 10 to 15.
+.TP
+.B %p
+Print a memory addresse.
+.TP
+.B %r
+Print a reversed string.
+.TP
+.B %R
+Print a string in ROT13 encryption.
+.TP
+.B %S
+Print Non printable characters as (\x).
+.SH COPYRIGHT
+.B GNU haruma copyright, breakdance!
+.printf.1 [+] | | utf-8 (unix)
